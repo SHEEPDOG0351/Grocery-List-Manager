@@ -69,8 +69,18 @@
         color: white;
         font-size: 20px;
         background-color: transparent; 
-        /* border: none;                   */
-        /* outline: none;  */
+    }
+
+    .unpurchased-items-list-container {
+        font-size: 23px;
+    }
+
+    #unpurchased-items-list { 
+        padding-left: 20px;
+    }
+
+    .unpurchased-item {
+        font-size: 23px;
     }
 
   </style>
@@ -88,7 +98,11 @@
             <input class="SearchBar" type="text" placeholder="Item" />
           </div>
     </div>
-    
-    <div class="allitem-container">
+
+    <div class="unpurchased-items-list-container">
+        <ul id="unpurchased-items-list">
+            
+        </ul>
+    </div>
     <script src="Grocery-list.js"></script>
 </html>
