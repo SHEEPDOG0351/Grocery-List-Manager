@@ -34,6 +34,7 @@
      #button-container {
         display: flex;
         justify-content: center;
+        margin: 10px;
         margin-top: 40px;
     }
 
@@ -45,6 +46,7 @@
         background-color: cyan;
         border: 5px solid cyan;
         border-radius: 10px;
+        margin-right: 10px;
     }
  
     button:hover {
@@ -54,115 +56,39 @@
         transition: 0.2s ease-in;
     }
 
+    .list-container {
+        padding-left: 10px;
+    }
+
+    .listItem-title {
+        font-size: 18px;
+    }
+
+    input {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        background-color: transparent; 
+        /* border: none;                   */
+        /* outline: none;  */
+    }
+
   </style>
   <body>
-    <h1 id="title">Grocery CART MANAGER</h1>
-
-    <h2 id="description">
-      Add Items Below You Want To Buy, Then Click On Them To Strikethrough The
-      Item Once You Buy It.
-    </h2>
-    <div class="list-container">
-        <span class="listItem-title">Item</span>
-    </div>
-    <div class="searchbar-container">
-      <input class="SearchBar" type="text" placeholder="Search for Item" />
-    </div>
-    <div class="allitem-container">
-      <div class="item-container">
-        <p class="item-title">Baguette</p>
-        <div class="item-description">
-          <p class="item-price">$2.50</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Croissant</p>
-        <div class="item-description">
-          <p class="item-price">2.50</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Muffin</p>
-        <div class="item-description">
-          <p class="item-price">$3.50</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Danish Pastry</p>
-        <div class="item-description">
-          <p class="item-price">$5.00</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Scone</p>
-        <div class="item-description">
-          <p class="item-price">$3.50</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Donut</p>
-        <div class="item-description">
-          <p class="item-price">$1.00</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Cinnamon Roll</p>
-        <div class="item-description">
-          <p class="item-price">$3.50</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Cookies 12ct</p>
-        <div class="item-description">
-          <p class="item-price">$8.00</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      <div class="item-container">
-        <p class="item-title">Eclair</p>
-        <div class="item-description">
-          <p class="item-price">$4.50</p>
-          <button class="btn btn-primary shop-btn" type="button">
-            ADD TO CART
-          </button>
-        </div>
-      </div>
-      
-   
-<body>
     <h1 id="title">Grocery List Manager</h1>
 
     <h2 id="description">Add Items Below You Want To Buy, Then Click On Them To Strikethrough The Item Once You Buy It.</h2>
     <div id="button-container">
-        <button>Add Item</button>
+        <button>Unpurchased Items</button>
+        <button>Purchased Items</button>
+    </div>
+    <div class="list-container">
+        <span class="listItem-title">Type Item and click enter to add</span>
+        <div class="searchbar-container">
+            <input class="SearchBar" type="text" placeholder="Item" />
+          </div>
     </div>
     
-
-    <div class="item-container">
-    </div>
+    <div class="allitem-container">
     <script src="Grocery-list.js"></script>
-  </body>
 </html>
