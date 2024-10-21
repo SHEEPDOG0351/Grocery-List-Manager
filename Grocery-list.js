@@ -6,6 +6,11 @@ let unpurchased_items = [];
 
 let unpurchasedItem = ''; // Will hold value that should be added to an li tag
 
+// Buttons for displaying their respective items
+let PurchasedBtn = document.querySelector('.show-purchased-btn');
+let UnpurchasedBtn = document.querySelector('.show-unpurchased-btn');
+let allItemsBtn = document.querySelector('.allItemsBtn')
+
 // Add event listeners for 'Enter' key press on input fields
 for (let i = 0; i < inputFields.length; i++) {
     let input = inputFields[i];
@@ -49,11 +54,42 @@ function displayUnpurchasedItem(string) {
 
     // Add a click event listener to apply strikethrough
     li.addEventListener('click', function() {
-        // Toggle strikethrough when clicked
         if (li.style.textDecoration === 'line-through') {
-            li.style.textDecoration = 'none';  // Remove strikethrough
+            li.style.textDecoration = 'none';  
+            li.classList.remove('purchased-items')
         } else {
-            li.style.textDecoration = 'line-through';  // Add strikethrough
+            li.style.textDecoration = 'line-through';  
+            li.classList.add('purchased-items')
         }
     });
 }
+
+PurchasedBtn.addEventListener('click', function() {
+    let allItems = document.querySelectorAll('#unpurchased-items-list li');
+    allItems.forEach(function(item) {
+        if (item.classList.contains('purchased-items')) {
+            item.style.display = 'list-item'; // Show purchased items
+        } else {
+            item.style.display = 'none';  // Hide unpurchased items
+        }
+    });
+});
+
+// Function to show only unpurchased items
+UnpurchasedBtn.addEventListener('click', function() {
+    let allItems = document.querySelectorAll('#unpurchased-items-list li');
+    allItems.forEach(function(item) {
+        if (item.classList.contains('purchased-items')) {
+            item.style.display = 'none'; // Hide purchased items
+        } else {
+            item.style.display = 'list-item';  // Show unpurchased items
+        }
+    });
+});
+
+allItemsBtn.addEventListener('click', function() {
+    let allItems = document.querySelectorAll('#unpurchased-items-list li');
+    allItems.forEach(function(item) {
+        item.style.display = 'list-item'
+    })
+})
