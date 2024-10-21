@@ -32,14 +32,41 @@
         padding-top: 20px;
     }
 
+    #button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    button {
+        color: black;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+        background-color: cyan;
+        border: 5px solid cyan;
+        border-radius: 10px;
+    }
+ 
+    button:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: black;
+        transition: 0.2s ease-in;
+    }
+
 </style>
 <body>
     <h1 id="title">Grocery List Manager</h1>
 
     <h2 id="description">Add Items Below You Want To Buy, Then Click On Them To Strikethrough The Item Once You Buy It.</h2>
+    <div id="button-container">
+        <button>Add Item</button>
+    </div>
+    
 
     <div class="item-container">
-        
+
     </div>
 </body>
 </html>
